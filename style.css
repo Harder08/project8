@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 1320px;
+}
+
+.container h1 {
+    color: white;
+    background-color: hsl(193deg 42% 33%);
+    width: 320px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    height: 260px;
+}
+
+.products {
+    border: 3px solid #eee;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.price {
+    color: hsl(201deg 32% 42%);
+    padding: 0 8px;
+    position: relative;
+
+}
+
+#sale .price {
+    color: hsl(11deg 99% 63%);
+}
+
+#sale {
+    position: relative;
+}
+
+#sale::after {
+    position: absolute;
+    content: "Sale!";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: hsl(11deg 99% 63%);
+    background: linear-gradient(180deg, hsl(11deg 99% 63%) 70%, rgb(212, 84, 55) 100%);
+    font-weight: bold;
+    color: white;
+    left: -17px;
+    top: -18px;
+}
+
+.line {
+    display: inline-flex;
+    background-color: #eee;
+    height: 3px;
+    width: 50px;
+}
+
+.product-name div {
+    display: flex;
+    align-items: center;
+}
+
+.sale .line {
+    width: 20px;
+}
